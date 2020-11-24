@@ -8,7 +8,7 @@ require('dotenv').config();
 const uri = process.env.MONGODB_URI;
 const port = process.env.PORT || 3001;
 
-const Message = require('./Message');
+const Message = require('./message');
 const mongoose = require('mongoose');
 
 mongoose.connect(uri, {
