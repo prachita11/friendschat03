@@ -6,7 +6,7 @@ const io = require('socket.io')(http);
 require('dotenv').config(); 
 
 const uri = process.env.MONGODB_URI;
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3001;
 
 const Message = require('./Message');
 const mongoose = require('mongoose');
@@ -47,5 +47,5 @@ io.on('connection', (socket) => {
 });
 
 http.listen(port, () => {
-  console.log('listening on *:' + port);
+  
 });

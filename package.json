@@ -3,23 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "12.13.0"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently --kill-others \"heroku local\" \"npm run start --prefix ./client\"",
-    "start": "serve -s build",
-    "build": "npm build",
-    "postinstall": "npm install --prefix ./server && npm install --prefix ./client && npm run build --prefix ./client"
+    "postinstall": "npm install --prefix ./server && npm install --prefix ./client && npm run build --prefix ./client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prachita11/friendschat03.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^5.3.0"
+  "bugs": {
+    "url": "https://github.com/prachita11/friendschat03/issues"
   },
+  "homepage": "https://github.com/prachita11/friendschat03#readme",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "serve": "^11.3.2"
+    "concurrently": "^5.3.0"
   }
 }
