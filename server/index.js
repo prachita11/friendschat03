@@ -16,7 +16,10 @@ mongoose.connect(uri, {
   useNewUrlParser: true,
 });
 
-app.use(express.static(path.join(__dirname,  + '/../client/build')));
+app.use(express.static(path.join(__dirname,'..', 'client', 'build')));
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname,+ '..', 'client', 'build','index.html'));
+});
 
 io.on('connection', (socket) => {
 
