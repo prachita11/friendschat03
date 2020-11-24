@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "serve -s build",
     "dev": "concurrently --kill-others \"heroku local\" \"npm run start --prefix ./client\"",
     "postinstall": "npm install --prefix ./server && npm install --prefix ./client && npm run build --prefix ./client"
   },

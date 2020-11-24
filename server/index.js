@@ -16,10 +16,7 @@ mongoose.connect(uri, {
   useNewUrlParser: true,
 });
 
-app.use(express.static(path.join(__dirname,'..', 'client', 'build')));
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname,+ '..', 'client', 'build','index.html'));
-});
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
 io.on('connection', (socket) => {
 
@@ -48,8 +45,6 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('push', msg);
   });
 });
-
-
 
 http.listen(port, () => {
   console.log('listening on *:' + port);
